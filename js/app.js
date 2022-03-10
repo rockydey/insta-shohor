@@ -40,7 +40,7 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
 
-    if (document.getElementById("liked").innerText = 'Liked posts') {
+    if (document.getElementById("liked").innerHTML = `<h1>Liked posts</h1>`) {
       displayLikedPosts();
     }
   } else {
@@ -48,7 +48,7 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
 
-    if (document.getElementById("reported").innerText = 'Reported posts') {
+    if (document.getElementById("reported").innerHTML = `<h1>Reported posts</h1>`) {
       displayReportedPosts();
     }
   }
