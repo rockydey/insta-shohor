@@ -40,17 +40,13 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
 
-    if (document.getElementById("liked").innerHTML = `<h1>Liked posts</h1>`) {
-      displayLikedPosts();
-    }
+    displayLikedPosts();
   } else {
     document.getElementById("reported").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
 
-    if (document.getElementById("reported").innerHTML = `<h1>Reported posts</h1>`) {
-      displayReportedPosts();
-    }
+    displayReportedPosts();
   }
 };
 
@@ -146,18 +142,20 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+  document.getElementById("liked-content").textContent = '';
   const likedPosts = getLikedPosts();
   likedPosts.forEach((post) => {
     const div = createPost(post);
-    document.getElementById("liked").appendChild(div);
+    document.getElementById("liked-content").appendChild(div);
   });
 };
 
 const displayReportedPosts = () => {
+  document.getElementById("reported-content").textContent = '';
   const reportedPosts = getReportedPosts();
   reportedPosts.forEach((post) => {
     const div = createPost(post);
-    document.getElementById("reported").appendChild(div);
+    document.getElementById("reported-content").appendChild(div);
   });
 };
 
